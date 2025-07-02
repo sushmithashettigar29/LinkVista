@@ -48,8 +48,6 @@ const handleRedirect = async (req, res) => {
     }
 
     const userAgent = req.headers["user-agent"];
-    // const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
-    // const geo = geoip.lookup(ip);
     const ip =
       req.headers["x-forwarded-for"]?.split(",")[0] || req.socket.remoteAddress;
 

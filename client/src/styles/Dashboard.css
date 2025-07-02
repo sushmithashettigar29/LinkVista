@@ -115,10 +115,9 @@
     padding-left: 50px;
     padding-right: 50px;
   }
-
 }
 @media (max-width: 700px) {
-   .link-card {
+  .link-card {
     flex-direction: column;
     gap: 1rem;
   }
