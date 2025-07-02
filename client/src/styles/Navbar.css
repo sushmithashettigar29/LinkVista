@@ -45,10 +45,19 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 20px 30px;
+    padding: 20px 0px;
   }
   .navabr-links {
     display: flex;
     gap: 1rem;
+  }
+  .navbar-link {
+    font-size: 10px;
+  }
+  .navbar-button {
+    font-size: 10px;
+  }
+  .navbar-logo {
+    font-size: 15px;
   }
 }
