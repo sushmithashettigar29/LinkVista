@@ -42,7 +42,7 @@ function Login() {
         navigate("/dashboard");
       }
     } catch (err) {
-      setError(err.message || "Login failed");
+      setError("Login failed");
     } finally {
       setLoading(false);
     }

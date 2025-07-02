@@ -166,7 +166,8 @@
   .shorten-button {
     border-radius: 980px;
     padding: 0.8rem 1.5rem;
-    width: 126px;
+    width: 150px;
     align-self: center;
+    font-size: 15px;
   }
 }
