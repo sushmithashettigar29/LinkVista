@@ -1,7 +1,7 @@
+const axios = require("axios");
 const Url = require("../models/Url");
 const crypto = require("crypto");
 const Click = require("../models/Click");
-const geoip = require("geoip-lite");
 const QRCode = require("qrcode");
 
 const createShortUrl = async (req, res) => {
@@ -48,16 +48,26 @@ const handleRedirect = async (req, res) => {
     }
 
     const userAgent = req.headers["user-agent"];
-    const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
-    const geo = geoip.lookup(ip);
+    // const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+    // const geo = geoip.lookup(ip);
+    const ip =
+      req.headers["x-forwarded-for"]?.split(",")[0] || req.socket.remoteAddress;
+
+    let location = "Unknown";
+    try {
+      const geo = await axios.get(`http://ip-api.com/json/${ip}`);
+      if (geo.data?.status === "success") {
+        location = `${geo.data.country}, ${geo.data.city}`;
+      }
+    } catch (err) {
+      console.error("Location fetch failed:", err.message);
+    }
 
     const deviceType = /mobile/i.test(userAgent)
       ? "Mobile"
       : /tablet/i.test(userAgent)
       ? "Tablet"
       : "Desktop";
-
-    const location = geo ? `${geo.country}, ${geo.city}` : "Unknown";
 
     await Click.create({
       shortCode,
