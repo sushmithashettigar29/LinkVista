@@ -27,8 +27,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #d800f7;
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1rem;
   color: white;
   margin-bottom: 1.5rem;
 }
@@ -51,7 +50,7 @@
 .full-url span,
 .timestamp span {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .copy-btn-box {
@@ -193,5 +192,13 @@
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .full-url span,
+  .timestamp span {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .copy-btn-box {
+    padding: 30px 30px;
   }
 }
