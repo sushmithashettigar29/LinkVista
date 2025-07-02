@@ -1,7 +1,7 @@
 import axios from "axios";
 import authService from "./auth";
 
-const BASE_URL = "http://localhost:5000/api/url";
+const BASE_URL = "https://linkvista-5cak.onrender.com/api/url";
 
 const createShortUrl = async (fullUrl) => {
   const token = authService.getAuthToken();
@@ -28,7 +28,7 @@ const getLinkStats = async (shortCode) => {
 };
 
 const getMyUrls = async (token) => {
-  const response = await axios.get("http://localhost:5000/api/url/my", {
+  const response = await axios.get(`${BASE_URL}/my`, {
     headers: {
       Authorization: `${token}`,
     },
@@ -37,7 +37,7 @@ const getMyUrls = async (token) => {
 };
 
 const deleteUrl = async (id, token) => {
-  await axios.delete(`http://localhost:5000/api/url/${id}`, {
+  await axios.delete(`${BASE_URL}/${id}`, {
     headers: { Authorization: `${token}` },
   });
 };

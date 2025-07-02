@@ -2,9 +2,9 @@ import "../styles/Footer.css";
 
 const Footer = () => {
   const socialLinks = {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    instagram: "https://instagram.com/yourusername",
+    github: "https://github.com/sushmithashettigar29",
+    linkedin: "https://www.linkedin.com/in/sushmithashettigar/",
+    instagram: "https://www.instagram.com/sushmithas.______/",
   };
   return (
     <footer className="footer">
