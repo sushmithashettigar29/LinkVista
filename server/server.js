@@ -19,6 +19,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/url", urlRoutes);
 app.get("/:shortCode", handleRedirect);
 
+app.get("/", (req, res) => {
+  res.send("Backend Working properly!");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
