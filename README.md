@@ -2,8 +2,6 @@
 
 [Live App](https://link-vista.vercel.app/)
 
-[Backend API](https://linkvista-5cak.onrender.com)
-
 LinkVista is a fullstack URL shortener built with React, Node.js, and MongoDB that lets users generate short, shareable links along with auto-generated QR codes. It also provides visual analytics such as device type, click count, and location using an intuitive dashboard.
 
 ---
@@ -105,7 +103,7 @@ npm start
 cd ../client
 npm run dev
 
-
+---
 ## 📝 License
 
 This project is licensed under the **MIT License**.
