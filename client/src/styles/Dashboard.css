@@ -1,0 +1,125 @@
+.dashboard-container {
+  max-width: 1100px;
+  margin: auto;
+  margin-bottom: 54px;
+}
+.dashboard-heading {
+  font-size: 28px;
+  margin-bottom: 2rem;
+}
+.dashboard-welcome {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  color: #d800f7;
+}
+
+.stats-box {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d800f7;
+}
+
+.stat-label {
+  color: #555;
+}
+
+.section-heading {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 8px;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.link-info {
+  flex: 1;
+}
+
+.short-url {
+  color: #d800f7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.full-url {
+  font-size: 0.85rem;
+  color: #666;
+  word-break: break-all;
+  margin: 4px 0;
+}
+
+.click-count {
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.link-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-btn,
+.delete-btn {
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.view-btn {
+  background-color: #d800f7;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #000;
+  color: white;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #555;
+}
+@media (max-width: 1200px) {
+  .dashboard-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+}
+@media (max-width: 700px) {
+   .link-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
